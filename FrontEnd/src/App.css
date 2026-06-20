@@ -1,0 +1,47 @@
+.app {
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.header {
+  height: 70px;
+  padding: 0 2rem;
+  background: #111827;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: #22c55e;
+  font-size: 1.4rem;
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.1rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.header nav a:hover,
+.header nav a.active {
+  background: #22c55e;
+  color: #111827;
+}
+
+.main {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}

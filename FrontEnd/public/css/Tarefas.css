@@ -1,0 +1,152 @@
+.container-tarefas {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.container-tarefas h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111827;
+  font-size: 2rem;
+}
+
+.container-tarefas > p {
+  text-align: center;
+  color: #4b5563;
+}
+
+/* Cards lado a lado */
+.tasks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Card */
+.task-card {
+  width: 350px;
+  min-height: 260px;
+
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.04);
+
+  transition: 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+}
+
+.task-card h3 {
+  color: #111827;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.task-card p {
+  color: #4b5563;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+/* Status */
+.status-pendente,
+.status-concluida {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.status-pendente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-concluida {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* Ações */
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.task-actions i {
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.task-actions i:hover {
+  transform: scale(1.15);
+}
+
+.confirm {
+  color: #16a34a;
+}
+
+.edit {
+  color: #2563eb;
+}
+
+.view {
+  color: #7c3aed;
+}
+
+.delete {
+  color: #dc2626;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .container-tarefas {
+    padding: 0 1rem;
+  }
+
+  .task-card {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 0.9rem 1.2rem;
+
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.search-input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
