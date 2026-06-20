@@ -12,6 +12,9 @@ const Cadastrar = () => {
         dueDate: ''
     });
 
+    const hoje = new Date();
+const dataMinima = hoje.toLocaleDateString("en-CA");
+
     const handleChange = (e) => {
         setTask({
             ...task,
@@ -81,6 +84,7 @@ const Cadastrar = () => {
                         type="date"
                         id="dueDate"
                         name="dueDate"
+                        min={dataMinima}
                         value={task.dueDate}
                         onChange={handleChange}
                         required

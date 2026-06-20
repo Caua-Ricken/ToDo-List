@@ -1,6 +1,6 @@
 const Task = require('../models/Task');
 
-module.exports ={
+module.exports = {
 
     async createTask(req, res) {
         let { title, description, dueDate } = req.body;
@@ -30,21 +30,21 @@ module.exports ={
     async removeTask(req, res) {
         const { id } = req.params;
         try {
-            const deleted = await Task.destroy({ where: { id: id }});
+            const deleted = await Task.destroy({ where: { id: id } });
             if (deleted) {
                 res.status(200).json({ message: 'Task deleted successfully' });
             } else {
                 res.status(404).json({ message: 'Task not found' });
             };
         } catch (error) {
-                res.status(500).json({ message: 'Error deleting task', error: error.message });
+            res.status(500).json({ message: 'Error deleting task', error: error.message });
         }
     },
 
     async editTask(req, res) {
         const { id } = req.params;
         try {
-            const task = await Task.findOne({ where: { id: id }, raw: true});
+            const task = await Task.findOne({ where: { id: id }, raw: true });
             if (task) {
                 res.json(task);
             } else {
@@ -78,22 +78,36 @@ module.exports ={
         }
     },
 
-    async completeTask(req, res) {
+    async editTask(req, res) {
         const { id } = req.params;
-        const status = req.body.done === '0' ? true : false;
+        let { title, description, dueDate } = req.body;
+
+        if (!title || !description || !dueDate) {
+            return res.status(400).json({ message: 'Title and description are required' });
+        }
 
         try {
-            const update = await Task.update({ done: status }, { where: { id: id }})
-            if (update[0] === 1) {
-                res.redirect('/view');
-            } else {
-                res.status(404).json({ message: 'Task not found' });
+            const task = await Task.findByPk(id);
+
+            if (!task) {
+                return res.status(404).json({
+                    message: 'Tarefa não encontrada'
+                });
             }
+
+            task.title = title;
+            task.description = description;
+            task.dueDate = dueDate;
+
+            await task.save();
+            res.status(201).json({ message: 'Task created successfully' });
         } catch (error) {
-            res.status(500).json({ message: 'Error completing task', error: error.message });
+            res.status(500).json({ message: 'Error creating task', error: error.message });
         }
+
     }
-     
+
+
 
 
 }

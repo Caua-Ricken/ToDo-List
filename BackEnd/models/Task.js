@@ -11,7 +11,7 @@ const Task = conn.define('Task', {
         allowNull: false
     },
     dueDate: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: false
     },
     done: {
