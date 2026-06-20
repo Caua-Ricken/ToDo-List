@@ -2,4 +2,4 @@
 BackEnd/node_modules/
 FrontEnd/node_modules/
 
-**/db/conn.js
+.env

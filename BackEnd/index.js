@@ -3,6 +3,8 @@ const app = express()
 const conn = require('./db/conn');
 const Task = require('./models/Task');
 
+const PORT = process.env.PORT || 3000;
+
 const cors = require('cors');
 app.use(cors());
 
@@ -18,7 +20,9 @@ app.use('/api', api)
 const listen = async () => {
     try {
         await conn.sync();
-        app.listen(3000);
+        app.listen(PORT, () => {
+        console.log(`Servidor rodando na porta ${PORT}`);
+    });
     } catch (error) {
         console.log(error);
     }
