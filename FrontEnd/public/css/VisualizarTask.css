@@ -100,29 +100,62 @@
 }
 
 @media (max-width: 800px) {
-    .modal-overlay {
-        align-items: flex-start;
-        padding: 1rem 0;
-    }
+  .modal-overlay {
+    align-items: center;
+    padding: 1rem;
+  }
 
-    .modal-container {
-        width: calc(100% - 2rem);
-        max-width: 420px;
+  .modal-container {
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
 
-        margin: 0 auto;
-        padding: 1.5rem;
-        border-radius: 16px;
+    padding: 1.3rem;
+    border-radius: 16px;
 
-        max-height: calc(100vh - 2rem);
-        overflow-y: auto;
-    }
+    overflow-y: auto;
+  }
 
-    .modal-container h2 {
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
-    }
+  .modal-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
 
-    .info-group p {
-        padding: .9rem 1rem;
-    }
+  .info-group {
+    margin-bottom: 1rem;
+  }
+
+  .info-group span {
+    font-size: .85rem;
+  }
+
+  .info-group p {
+    font-size: .95rem;
+    padding: .85rem;
+    word-break: break-word;
+  }
+
+  .btn-close {
+    padding: .9rem;
+    font-size: .95rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .modal-overlay {
+    padding: .7rem;
+  }
+
+  .modal-container {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .modal-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .info-group p {
+    font-size: .9rem;
+  }
 }

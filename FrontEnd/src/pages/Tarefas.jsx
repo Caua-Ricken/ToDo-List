@@ -99,7 +99,7 @@ const Tarefas = () => {
                 onChange={(e) => setPesquisa(e.target.value)}
             />
 
-            {loading && <p>Carregando...</p>}
+            {loading && <p className='loading-change'>Carregando...</p>}
 
             {!loading && tasks.length === 0 && (
                 <p>Nenhuma tarefa encontrada</p>

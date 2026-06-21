@@ -4,9 +4,6 @@ import "../../public/css/VisualizarTask.css"
 const VisualizarTask = ({open, task, onClose}) => {
   if (!open || !task) return null;
 
-  const hoje = new Date();
-  const dataMinima = hoje.toLocaleDateString("en-CA");
-
   return (
      <div className="modal-overlay" onClick={onClose}>
       <div

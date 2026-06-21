@@ -74,7 +74,6 @@ const dataMinima = hoje.toLocaleDateString("en-CA");
                         name="description"
                         value={task.description}
                         onChange={handleChange}
-                        required
                     />
                 </div>
 
