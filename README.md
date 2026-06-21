@@ -39,7 +39,7 @@ Aplicação web desenvolvida para gerenciamento de tarefas, permitindo cadastrar
 
 ---
 
-## 📁 Arquitetura
+## 📁 Arquitetura Back-End
 
 O back-end foi desenvolvido seguindo o padrão **MVC (Model-View-Controller)**, separando responsabilidades entre:
 
@@ -49,6 +49,22 @@ O back-end foi desenvolvido seguindo o padrão **MVC (Model-View-Controller)**, 
 - Configuração do banco de dados
 
 Essa estrutura foi escolhida para manter o projeto organizado e facilitar sua manutenção.
+
+---
+
+## 📁 Arquitetura Front-end
+
+O front-end foi desenvolvido utilizando React, buscando manter uma organização simples e escalável. A estrutura foi dividida em:
+
+- Pages
+- Components
+- Arquivos de estilo (CSS)
+- Configuração de rotas
+- Arquivo principal da aplicação
+
+As páginas são responsáveis pela renderização das telas da aplicação, enquanto os componentes concentram elementos reutilizáveis. Os estilos foram separados em arquivos CSS para facilitar a manutenção e a organização do projeto.
+
+Essa estrutura foi escolhida para manter o código organizado, facilitar a reutilização de componentes e tornar futuras manutenções e expansões da aplicação mais simples.
 
 ---
 
