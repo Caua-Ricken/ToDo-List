@@ -74,16 +74,10 @@ Essa estrutura foi escolhida para manter o projeto organizado e facilitar sua ma
 
 A aplicação foi publicada utilizando serviços gratuitos e pode ser acessada diretamente pelo navegador.
 
-**Front-end**
+**Aplicação Web**
 
 ```
-https://SEU-FRONTEND.vercel.app
-```
-
-**Back-end**
-
-```
-https://SEU-BACKEND.onrender.com
+https://to-do-list-caua-ricken.vercel.app/
 ```
 
 ---
