@@ -2,7 +2,10 @@ import React from 'react'
 import "../../public/css/VisualizarTask.css"
 
 const VisualizarTask = ({open, task, onClose}) => {
-    if (!open || !task) return null;
+  if (!open || !task) return null;
+
+  const hoje = new Date();
+  const dataMinima = hoje.toLocaleDateString("en-CA");
 
   return (
      <div className="modal-overlay" onClick={onClose}>
@@ -25,7 +28,7 @@ const VisualizarTask = ({open, task, onClose}) => {
         <div className="info-group">
           <span>Data Prevista</span>
           <p>
-            {new Date(task.dueDate).toLocaleDateString('pt-BR')}
+            {task.dueDate.split("T")[0].split("-").reverse().join("/")}
           </p>
         </div>
 
