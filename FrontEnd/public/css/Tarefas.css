@@ -119,15 +119,42 @@
   color: #dc2626;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .container-tarefas {
-    padding: 0 1rem;
+.modal-edit-container {
+  width: 100%;
+  max-width: 550px;
+
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, .08),
+    0 4px 10px rgba(0, 0, 0, .05);
+}
+
+.modal-edit-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #111827;
+  margin: 0 0 2.5rem;
+}
+
+@media (max-width: 800px) {
+  .modal-edit-container {
+    width: calc(100% - 2rem);
+    max-width: 420px;
+
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 16px;
+
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
   }
 
-  .task-card {
-    width: 100%;
-    min-height: auto;
+  .modal-edit-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
   }
 }
 

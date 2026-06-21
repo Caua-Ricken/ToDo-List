@@ -98,3 +98,31 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 800px) {
+    .modal-overlay {
+        align-items: flex-start;
+        padding: 1rem 0;
+    }
+
+    .modal-container {
+        width: calc(100% - 2rem);
+        max-width: 420px;
+
+        margin: 0 auto;
+        padding: 1.5rem;
+        border-radius: 16px;
+
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+    }
+
+    .modal-container h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .info-group p {
+        padding: .9rem 1rem;
+    }
+}
