@@ -19,7 +19,7 @@ const Tarefas = () => {
     const fetchTasks = async () => {
         setLoading(true);
         try {
-            const res = await fetch('http://localhost:3000/api/tasks');
+            const res = await fetch('https://todo-list-ajcm.onrender.com/api/tasks');
             const data = await res.json();
             setTasks(data);
         } catch (error) {
@@ -43,7 +43,7 @@ const Tarefas = () => {
 
         setLoading(true);
         try {
-            const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
+            const res = await fetch(`https://todo-list-ajcm.onrender.com/api/tasks/${id}`, {
                 method: 'DELETE'
             });
 
@@ -71,7 +71,7 @@ const Tarefas = () => {
     const atualizarStatus = async (id) => {
         setLoading(true)
         try {
-            const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
+            const res = await fetch(`https://todo-list-ajcm.onrender.com/api/tasks/${id}`, {
                 method: 'PATCH'
             });
 

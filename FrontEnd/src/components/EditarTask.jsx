@@ -38,7 +38,7 @@ const dataMinima = hoje.toLocaleDateString("en-CA");
     setLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:3000/api/tasks/edit/${task.id}`, {
+      const res = await fetch(`https://todo-list-ajcm.onrender.com/api/tasks/edit/${task.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

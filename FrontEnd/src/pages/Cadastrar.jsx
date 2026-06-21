@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../../public/css/cadastrar.css'
+import '../../public/css/Cadastrar.css'
 
 const Cadastrar = () => {
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ const dataMinima = hoje.toLocaleDateString("en-CA");
         setLoading(true);
 
         try {
-            const res = await fetch('http://localhost:3000/api/tasks', {
+            const res = await fetch('https://todo-list-ajcm.onrender.com/api/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
