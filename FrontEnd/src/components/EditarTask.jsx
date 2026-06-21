@@ -61,7 +61,7 @@ const dataMinima = hoje.toLocaleDateString("en-CA");
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="container" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-edit-container" onClick={(e) => e.stopPropagation()}>
         <h2>Editar Tarefa</h2>
 
         <form onSubmit={updateTask}>
